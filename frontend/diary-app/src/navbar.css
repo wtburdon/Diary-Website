@@ -1,0 +1,11 @@
+.navbar-div{
+    margin:0;
+    display:flex;
+    max-width: max-content;
+    background-color: #4d5454;
+}
+
+.navbar-div button{
+    margin-right:20px;
+    margin-left:20px;
+}
