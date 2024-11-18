@@ -4,7 +4,7 @@ function contentPage(){
         <div>
             <div class="border"></div>
             <div>
-                <p></p>
+                <p>CONTENT</p>
             </div>
             <div class="border"></div>
         </div>
