@@ -2,9 +2,13 @@
 
 function footer(){
     return(
-        <div>
-            <div><p>footer</p></div>
-        </div>
+        <section>
+            <div>
+                <div>
+                    <p>footer</p>
+                </div>
+            </div>
+        </section>
     )
 }
 
