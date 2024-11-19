@@ -17,3 +17,23 @@ class User(db.Model):
             "email":self.email,
         }
     
+class Entry(db.Model): #Entry models
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    creation_date = db.Column(db.DateTime, nullable=False)
+    updated_date = db.Column(db.DateTime, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id', lazy=True))
+
+    user = db.relationship('User', backref=db.backref('entries', lazy=True))
+
+
+    def to_json(self):
+        return{
+            "id":self.id,
+            "title":self.title,
+            "content": self.content,
+            "creationDate":self.creation_date,
+            "updatedDate":self.updated_date,
+            "userId":self.user_id
+        }
